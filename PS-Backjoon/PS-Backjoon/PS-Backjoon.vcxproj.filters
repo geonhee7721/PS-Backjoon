@@ -30,5 +30,8 @@
     <ClCompile Include="11279_최대힙.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1655_가운데를말해요.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
