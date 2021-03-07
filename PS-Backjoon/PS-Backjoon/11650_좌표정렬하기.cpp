@@ -1,4 +1,4 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 
 struct Node {
 	int x, y;
@@ -10,11 +10,11 @@ bool isBigger(int a, int b) {
 }
 
 void heapSort(){
-	// ¸ğµç ³ëµå¸¦ ¼øÈ¸ÇÏ¸é¼­, ÇöÀç ³ëµå¸¦ ±âÁØÀ¸·Î À§ÂÊÀ¸·Î ¿Ã¶ó°¡¸ç Heapify
+	// ëª¨ë“  ë…¸ë“œë¥¼ ìˆœíšŒí•˜ë©´ì„œ, í˜„ì¬ ë…¸ë“œë¥¼ ê¸°ì¤€ìœ¼ë¡œ ìœ„ìª½ìœ¼ë¡œ ì˜¬ë¼ê°€ë©° Heapify
 	for (int i = 1; i < N; i++) {
 		int current = i;		while (current > 0 && isBigger(current, (current - 1) / 2))	{			Node temp = heap[(current - 1) / 2];			heap[(current - 1) / 2] = heap[current];			heap[current] = temp;			current = (current - 1) / 2;		}
 	}
-	// Å©±â ÁÙ¿©°¡¸ç Á¤·Ä	for (int i = N - 1; i >= 0; --i) {
+	// í¬ê¸° ì¤„ì—¬ê°€ë©° ì •ë ¬	for (int i = N - 1; i >= 0; --i) {
 		Node temp = heap[0];
 		heap[0] = heap[i];
 		heap[i] = temp;
