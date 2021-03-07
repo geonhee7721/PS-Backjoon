@@ -31,7 +31,13 @@ bool compare(int a, int b) {
 
 void heapSort() {
 	for (int i = 1; i < N; ++i) {
-		int current = i;		while (current > 0 && compare(current, (current - 1) / 2)) {			Student temp = student[(current - 1) / 2];			student[(current - 1) / 2] = student[current];			student[current] = temp;			current = (current - 1) / 2;		}
+		int current = i;
+		while (current > 0 && compare(current, (current - 1) / 2)) {
+			Student temp = student[(current - 1) / 2];
+			student[(current - 1) / 2] = student[current];
+			student[current] = temp;
+			current = (current - 1) / 2;
+		}
 	}
 
 	for (int i = N - 1; i >= 0; --i) {
@@ -39,11 +45,19 @@ void heapSort() {
 		student[0] = student[i];
 		student[i] = temp;
 
-		int current = 0;		while (current * 2 + 1 < i)	{			int child;			if (current * 2 + 2 == i) child = current * 2 + 1;			else child = compare(current * 2 + 1, current * 2 + 2) ? current * 2 + 1 : current * 2 + 2;			
+		int current = 0;
+		while (current * 2 + 1 < i)	{
+			int child;
+			if (current * 2 + 2 == i) child = current * 2 + 1;
+			else child = compare(current * 2 + 1, current * 2 + 2) ? current * 2 + 1 : current * 2 + 2;
+			
 			if (compare(current, child)) break;
 
-			Student temp = student[current];			student[current] = student[child];			student[child] = temp;
-			current = child;		}
+			Student temp = student[current];
+			student[current] = student[child];
+			student[child] = temp;
+			current = child;
+		}
 	}
 }
 
