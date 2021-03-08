@@ -154,7 +154,10 @@
     <ClCompile Include="14225_부분수열의합.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1655_가운데를말해요.cpp" />
+    <ClCompile Include="1620_나는야포켓몬마스터이다솜.cpp" />
+    <ClCompile Include="1655_가운데를말해요.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
