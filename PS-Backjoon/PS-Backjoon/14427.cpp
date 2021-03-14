@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 struct Node {
-	int arrayIndex;
 	int heapIndex;
 	int num;
 } node[100001];
@@ -59,7 +58,6 @@ int main() {
 	scanf("%d", &N);
 	
 	for (int i = 0; i < N; ++i) {
-		node[nodeIndex].arrayIndex = nodeIndex;
 		scanf("%d", &node[nodeIndex].num);
 
 		heapPush(nodeIndex);
@@ -83,7 +81,7 @@ int main() {
 			downdate(node[fromIndex].heapIndex);
 		}
 		else if (query == 2) {
-			printf("%d\n", node[heap[0]].arrayIndex);
+			printf("%d\n", heap[0]);
 		}
 	}
 }
