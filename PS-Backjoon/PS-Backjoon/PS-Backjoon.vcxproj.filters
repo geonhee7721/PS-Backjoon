@@ -36,5 +36,8 @@
     <ClCompile Include="1620_나는야포켓몬마스터이다솜.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="14427.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
